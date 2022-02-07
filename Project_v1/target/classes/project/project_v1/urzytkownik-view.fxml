@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #111111;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.project_v1.Urzytkownik_Controller">
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="600.0" prefWidth="250.0" style="-fx-background-color: #17274f;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="146.0" prefWidth="257.0" text="Sklep i Servis Komputerowy" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#User" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Urzytkownik" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Sklep" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Sklep" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Koszyk" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Koszyk" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Tranzakcje" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Tranzakje" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#add_servis" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Zgłoszenie Servisowe" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Servis" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Servis" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#Logout" prefWidth="200.0" style="-fx-background-color: #0700df;" text="Wyloguj" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <HBox BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="label1" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ComboBox fx:id="kategoria" editable="true" prefWidth="150.0" promptText="Kategoria" visible="false" />
+                  <Button fx:id="button1" mnemonicParsing="false" onAction="#Find" text="Znajdź" visible="false">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="button2" mnemonicParsing="false" onAction="#Refrseh" text="Odświerz" visible="false" />
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <TableView fx:id="Table" BorderPane.alignment="CENTER" />
+         </center>
+         <bottom>
+            <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="button3" mnemonicParsing="false" onAction="#KUP" text="KUP" visible="false">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </center>
+</BorderPane>
